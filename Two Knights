@@ -1,0 +1,21 @@
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+ 
+public class Main {
+    static BufferedWriter out = new BufferedWriter(new OutputStreamWriter(System.out));
+ 
+    public static void main(String[] args) throws java.lang.Exception {
+        Scanner sc = new Scanner(System.in);
+        long n=sc.nextLong();
+        StringBuilder sb=new StringBuilder();
+        for(long i=1;i<=n;i++){
+            long ans=(long)(i*i)*(i*i-1)/2;
+            ans-=(long)4l*(i-1)*(i-2);
+            sb.append(ans+"\n");
+        }
+        sb.deleteCharAt(sb.length()-1);
+        System.out.println(sb);
+    }
+ 
+}
