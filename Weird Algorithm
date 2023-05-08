@@ -1,0 +1,25 @@
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+ 
+public class Main {
+    static BufferedWriter out = new BufferedWriter(new OutputStreamWriter(System.out));
+ 
+    public static void main(String[] args) throws java.lang.Exception {
+        Scanner sc = new Scanner(System.in);
+        long n = sc.nextLong();
+        StringBuffer sb = new StringBuffer();
+        sb.append(n + " ");
+        while (n != 1) {
+            if ((n & 1) == 0) {
+                n = n / 2;
+            } else {
+                n = 3 * n + 1;
+            }
+            sb.append(n + " ");
+        }
+        System.out.println(sb);
+ 
+    }
+ 
+}
